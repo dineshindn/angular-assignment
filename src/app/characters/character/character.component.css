@@ -1,0 +1,203 @@
+
+
+.ant-col-xs-12 {
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.idVDCi {
+    width: 190px;
+    height: 240px;
+    background: linear-gradient(to right, rgba(13, 37, 63, 0.99) 0%, rgba(13, 37, 63, 0.7) 100%);
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    transition: transform 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93) 0s;
+}
+.idVDCi .img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.idVDCi .img-container .card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+    object-position: left center;
+}
+
+.idVDCi .meta-container {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    transition: opacity 0.25s ease-in 0s, bottom 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93) 0s;
+    opacity: 0;
+    padding: 30px 10px 15px;
+    background-image: linear-gradient(rgba(12, 26, 40, 0), rgba(12, 26, 40, 0.12) 5px, rgba(12, 26, 40, 0.52) 24px, rgba(12, 26, 40, 0.79) 40px, rgb(12, 26, 40) 56px, rgb(12, 26, 40) 100%);
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.idVDCi:hover .meta-container:hover {
+    position: absolute;
+    width: 90%;
+    bottom: 0px;
+    transition: opacity 0.25s ease-in 0s, bottom 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93) 0s;
+    opacity: 1;
+    padding: 30px 10px 15px;
+    background-image: linear-gradient(rgba(12, 26, 40, 0), rgba(12, 26, 40, 0.12) 5px, rgba(12, 26, 40, 0.52) 24px, rgba(12, 26, 40, 0.79) 40px, rgb(12, 26, 40) 56px, rgb(12, 26, 40) 100%);
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.svJME .meta-container {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    transition: opacity 0.25s ease-in 0s, bottom 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93) 0s;
+    opacity: 0;
+    padding: 30px 10px 15px;
+    background-image: linear-gradient(rgba(12, 26, 40, 0), rgba(12, 26, 40, 0.12) 5px, rgba(12, 26, 40, 0.52) 24px, rgba(12, 26, 40, 0.79) 40px, rgb(12, 26, 40) 56px, rgb(12, 26, 40) 100%);
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.idVDCi .card-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    margin-bottom: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+}
+.idVDCi .card-description {
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+}
+.idVDCi .view-card {
+    font-size: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    padding: 2px 20px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.idVDCi:hover {
+    cursor: grab;
+    position: relative;
+    transform: scale3d(1.1, 1.1, 1) translate3d(0px, 0px, 0px) perspective(500px);
+    border-radius: 5px;
+}
+.idVDCi .view-card:hover {
+    cursor: pointer;
+}
+.ant-row {
+    position: relative;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    zoom: 1;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ant-row:after, .ant-row:before {
+    display: table;
+    content: "";
+}
+.biZBEW {
+    width: 100%;
+    max-width: 1275px;
+    margin: auto;
+    padding: 50px 20px;
+}
+.ZOqUU {
+    width: 100%;
+    padding-left: 0px;
+    margin-bottom: 30px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.ccSxrl {
+    font-size: 24px;
+    font-weight: bold;
+    word-spacing: 4px;
+    margin-bottom: 0px;
+    color: rgb(13, 37, 63);
+    text-transform: uppercase;
+    position: relative;
+    background-color: rgb(245, 248, 250);
+}
+.ccSxrl::before {
+    content: "";
+    position: absolute;
+    color: rgb(204, 204, 204);
+    font-size: 26px;
+    height: 90px;
+    width: 3px;
+    background-color: rgb(1, 180, 228);
+    transform: rotate(
+45deg
+);
+    top: -30px;
+    left: 25px;
+    z-index: -1;
+}
+.ant-row {
+    position: relative;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    zoom: 1;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ant-row:after, .ant-row:before {
+    display: table;
+    content: "";
+}
+
+
+@media (min-width: 992px)
+{
+.ant-col-lg-4 {
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16.66666667%;
+}
+}
+
+@media (max-width: 500px)
+{
+    .idVDCi {
+        width: 98%;
+    }
+}

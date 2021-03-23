@@ -1,0 +1,183 @@
+<div class="sc-bZQynM ccOtAX">
+  <div class="ant-carousel">
+    <div class="slick-slider slick-initialized" dir="ltr">
+      <div class="slick-list">
+        <div class="slick-track" style=" opacity: 1;">
+          <div class="container text-center">
+            <owl-carousel-o [options]="customOptions">
+              <ng-template carouselSlide>
+                <div class="container" style="width: 500px; height: 150px; margin: auto; margin-top: 50px;" >
+                    <ngx-charts-bar-vertical 
+                        [results]="comicsChart" 
+                        [results]="comicsChart" 
+                        [scheme]="colorScheme" 
+                        [schemeType]="schemeType" 
+                        [gradient]="gradient" 
+                        [xAxis]="xAxis"
+                        [yAxis]="yAxis" 
+                        [legend]="legend" 
+                        [xAxisLabel]="xAxisLabel" 
+                        [yAxisLabel]="xAxisLabel"
+                        [legendTitle]="legendTitle" 
+                        [legendPosition]="legendPosition" 
+                        [animations]="animations"
+                        [showGridLines]="showGridLines" 
+                        [trimXAxisTicks]="trimXAxisTicks"
+                        [trimYAxisTicks]="trimYAxisTicks" 
+                        [rotateXAxisTicks]="rotateXAxisTicks"
+                        [maxXAxisTickLength]="maxXAxisTickLength" 
+                        [maxYAxisTickLength]="maxYAxisTickLength"
+                        [xAxisTickFormatting]="formatString" 
+                        [yAxisTickFormatting]="formatNumber"
+                        [yAxisTicks]="yAxisTicks" 
+                        [showDataLabel]="showDataLabel" 
+                        [barPadding]="barPadding"
+                        [tooltipDisabled]="tooltipDisabled" 
+                        [roundEdges]="roundEdges"></ngx-charts-bar-vertical>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="container" style="width: 500px; height: 250px; margin: auto;" >
+                  <ngx-charts-pie-chart
+                    [results]="pieChart" 
+                    [scheme]="colorScheme" 
+                    [legend]="legend" 
+                    [legendTitle]="legendTitle" 
+                    [gradient]="gradient"
+                    (select)="onSelect($event)" 
+                    (activate)="onActivate($event)" >
+                  </ngx-charts-pie-chart>
+              </div>
+              </ng-template>
+
+            </owl-carousel-o>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<mat-expansion-panel expanded>
+  <mat-expansion-panel-header>
+    <div class="gnLxji">
+      <h2 class="ant-collapse-header charcc">CHARACTERS</h2>
+    </div>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>
+
+
+<mat-expansion-panel expanded>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h2 class="ant-collapse-header">COMICS</h2>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>
+
+<mat-expansion-panel expanded>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h2 class="ant-collapse-header">SERIES</h2>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>
+
+
+
+
+
+
+
+<!-- ***************************************************************************************************** -->
+
+
+<div class="ant-collapse-item ant-collapse-item-active">
+  <!-- <div class="ant-collapse-header" role="button" tabindex="0" aria-expanded="true">
+    <mat-expansion-panel expanded>
+      <mat-expansion-panel-header>
+        
+        <div spacing="true" class="sc-fjdhpX ejdATv">
+          <h2 class="sc-jzJRlG ccSxrl">Characters</h2>
+          <div class="sc-ckVGcZ btinyd"><a href="/characters">See All</a></div>
+        </div>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </div> -->
+
+  <div class="ant-collapse-content ant-collapse-content-active">
+    <div class="ant-collapse-content-box">
+      <div class="sc-jKJlTe dKwHcB">
+        <div class="slick-slider slick-initialized" dir="ltr"><button type="button" data-role="none"
+            class="slick-arrow slick-prev slick-disabled" style="display: block;"> Previous</button>
+          <div class="slick-list">
+            <div class="slick-track" style="width: 8880px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+              
+              <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false"
+                style="outline: none; width: 222px;">
+                <div>
+                  <div tabindex="-1" style="width: 100%; display: inline-block;">
+                    <div class="sc-kEYyzF idVDCi" draggable="true" style="opacity: 1;">
+                      <div class="img-container"><img class="card-img"
+                          src="http://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0.jpg"></div>
+                      <div class="meta-container">
+                        <h5 class="card-title">Hulk</h5>
+                        <p class="card-description">Caught in a gamma bomb explosion while trying to save the life of a
+                          teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the
+                          Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk
+                          gets.</p>
+                        <div class="view-card">View Details</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div data-index="1" class="slick-slide slick-active" tabindex="-1" aria-hidden="false"
+                style="outline: none; width: 222px;">
+                <div>
+                  <div tabindex="-1" style="width: 100%; display: inline-block;">
+                    <div class="sc-kEYyzF idVDCi" draggable="true" style="opacity: 1;">
+                      <div class="img-container"><img class="card-img"
+                          src="http://i.annihil.us/u/prod/marvel/i/mg/5/f0/5261a85a501fe.jpg"></div>
+                      <div class="meta-container">
+                        <h5 class="card-title">Doctor Strange</h5>
+                        <p class="card-description">Card description not available for this card..</p>
+                        <div class="view-card">View Details</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div data-index="39" class="slick-slide" tabindex="-1" aria-hidden="true"
+                style="outline: none; width: 222px;">
+                <div>
+                  <div tabindex="-1" style="width: 100%; display: inline-block;">
+                    <div class="sc-kEYyzF idVDCi" draggable="true" style="opacity: 1;">
+                      <div class="img-container"><img class="card-img"
+                          src="http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55.jpg"></div>
+                      <div class="meta-container">
+                        <h5 class="card-title">Iron Man</h5>
+                        <p class="card-description">Wounded, captured and forced to build a weapon by his enemies,
+                          billionaire industrialist Tony Stark instead created an advanced suit of armor to save his
+                          life and escape captivity. Now with a new outlook on life, Tony uses his money and
+                          intelligence to make the world a safer, better place as Iron Man.</p>
+                        <div class="view-card">View Details</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" data-role="none" class="slick-arrow slick-next" style="display: block;">
+            Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
