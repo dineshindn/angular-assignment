@@ -13,12 +13,20 @@ export class ComicsComponent implements OnInit {
   constructor(private comicsSvc: ComicsApiService) { }
   allComics: Observable<any> | undefined;
 
-  
+
   ngOnInit(){
     this.getComics();
   }
-   getComics(){
-     this.allComics = this.comicsSvc.getAllComics();
-   }
+
+  getComics(){
+    this.allComics = this.comicsSvc.getAllComics();
+  }
+  getComicsAll(){
+    this.allComics = this.comicsSvc.getComicsAll();
+  }
+
+  onClick() {
+  this.getComicsAll()
+  }
  
 }

@@ -16,8 +16,13 @@ export class SeriesComponent implements OnInit {
   ngOnInit(){
     this.getSeries();
   }
+
    getSeries(){
      this.allSeries = this.comicsSvc.getAllSeries();
    }
+
+  onClick() {
+    this.getSeries()
+    }
 
 }

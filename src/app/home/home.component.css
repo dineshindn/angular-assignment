@@ -320,3 +320,19 @@
     font-size: 20px;
     padding: 11px;
 }
+
+.chartstyle{
+    width: 500px; height: 150px; margin: auto; margin-top: 50px;
+}
+.chartstylepie{
+    width: 500px; height: 250px; margin: auto;
+}
+
+@media (max-width:600px){
+    .chartstyle{
+        width: 300px; height: 150px; margin: auto; margin-top: 50px;
+    }
+    .chartstylepie{
+        width: 250px; height: 250px; margin: auto;
+    }
+}

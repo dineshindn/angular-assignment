@@ -12,10 +12,14 @@ import { ComicsComponent } from './comics/comics.component';
 import { CharactersComponent } from './characters/characters.component';
 import { SeriesComponent } from './series/series.component';
 import { CharacterComponent } from './characters/character/character.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxChartsModule} from '@swimlane/ngx-charts';
 import { ChartModule} from '@syncfusion/ej2-angular-charts';
+import {MatPaginatorModule} from '@angular/material/paginator';
+// import { MatTableDataSource } from '@angular/material/table';
+import {NgxPaginationModule} from 'ngx-pagination';
+import {MatButtonModule} from '@angular/material/button'
 
 @NgModule({
   declarations: [
@@ -36,7 +40,10 @@ import { ChartModule} from '@syncfusion/ej2-angular-charts';
     HttpClientModule,
     CarouselModule,
     NgxChartsModule,
-    ChartModule
+    ChartModule,
+    MatPaginatorModule,
+    NgxPaginationModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

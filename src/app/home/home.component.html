@@ -6,7 +6,8 @@
           <div class="container text-center">
             <owl-carousel-o [options]="customOptions">
               <ng-template carouselSlide>
-                <div class="container" style="width: 500px; height: 150px; margin: auto; margin-top: 50px;" >
+                <div class="container" >
+                  <div class="chartstyle">
                     <ngx-charts-bar-vertical 
                         [results]="comicsChart" 
                         [results]="comicsChart" 
@@ -33,11 +34,14 @@
                         [showDataLabel]="showDataLabel" 
                         [barPadding]="barPadding"
                         [tooltipDisabled]="tooltipDisabled" 
-                        [roundEdges]="roundEdges"></ngx-charts-bar-vertical>
+                        [roundEdges]="roundEdges">
+                      </ngx-charts-bar-vertical>
+                    </div>
                 </div>
               </ng-template>
               <ng-template carouselSlide>
-                <div class="container" style="width: 500px; height: 250px; margin: auto;" >
+                <div class="container"  >
+                  <div class="chartstylepie">
                   <ngx-charts-pie-chart
                     [results]="pieChart" 
                     [scheme]="colorScheme" 
@@ -47,6 +51,7 @@
                     (select)="onSelect($event)" 
                     (activate)="onActivate($event)" >
                   </ngx-charts-pie-chart>
+                </div>
               </div>
               </ng-template>
 
@@ -107,7 +112,7 @@
     </mat-expansion-panel>
   </div> -->
 
-  <div class="ant-collapse-content ant-collapse-content-active">
+  <!-- <div class="ant-collapse-content ant-collapse-content-active">
     <div class="ant-collapse-content-box">
       <div class="sc-jKJlTe dKwHcB">
         <div class="slick-slider slick-initialized" dir="ltr"><button type="button" data-role="none"
@@ -179,5 +184,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

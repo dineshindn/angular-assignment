@@ -200,3 +200,14 @@
         width: 98%;
     }
 }
+
+@media (max-width:600px)
+{
+    .ant-col-xs-12 {
+        display: block;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 50%;
+        margin:auto;
+    }
+}
