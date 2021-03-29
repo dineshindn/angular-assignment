@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ComicsApiService } from './comics-api.service';
-import { Observable } from 'rxjs';
-
 
 @Component({
   selector: 'app-comics',
@@ -9,24 +7,44 @@ import { Observable } from 'rxjs';
   styleUrls: ['./comics.component.css']
 })
 export class ComicsComponent implements OnInit {
-
+  allComics: any = [];
   constructor(private comicsSvc: ComicsApiService) { }
-  allComics: Observable<any> | undefined;
-
-
-  ngOnInit(){
+  showSpinner = false;
+  loadingShow = false;
+  offset = 0;
+  limit = 0;
+  loadedCount = 0;
+  ngOnInit() {
+    this.loadingShow = true;
     this.getComics();
   }
-
-  getComics(){
-    this.allComics = this.comicsSvc.getAllComics();
+  getComics() {
+    this.comicsSvc.getAllComics(this.offset + 0).subscribe(data => {
+      if (data !== undefined) {
+        data.forEach((element: any) => {
+          this.allComics.push(element)
+        });
+        this.showSpinner = false;
+        this.loadingShow = false;
+      }
+    })
   }
-  getComicsAll(){
-    this.allComics = this.comicsSvc.getComicsAll();
-  }
-
   onClick() {
-  this.getComicsAll()
+    this.getComicsAll()
   }
- 
+  getComicsAll() {
+    this.showSpinner = true;
+    this.comicsSvc.getAllComics(this.offset + this.comicsSvc.loadedCount).subscribe(data => {
+      if (data !== undefined) {
+        data.forEach((element: any) => {
+          this.allComics.push(element)
+        });
+        this.showSpinner = false;
+      }
+    })
+  }
+
+  getTotal() {
+    return this.comicsSvc.comicsTotal;
+  }
 }

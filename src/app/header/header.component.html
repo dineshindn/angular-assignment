@@ -1,0 +1,14 @@
+<mat-toolbar class="navbar">
+    <div class="sc-bwzfXH iaDgpF">
+      <img alt="app-logo" src="./assets/MarvelLogo.svg">
+    </div>
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link
+      *ngFor="let link of navLinks"
+      [routerLink]="link.link"
+      routerLinkActive #rla="routerLinkActive"
+      [active]="rla.isActive">
+      {{link.label}}
+      </a>
+    </nav>
+  </mat-toolbar>

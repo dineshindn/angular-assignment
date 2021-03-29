@@ -1,34 +1,44 @@
-
 <div class="sc-hSdWYo biZBEW row ">
-  <div class="sc-fjdhpX ZOqUU"><h2 class="sc-jzJRlG ccSxrl">ALl Comics (28650)</h2></div>
+    <div class="sc-fjdhpX ZOqUU">
+        <h2 class="sc-jzJRlG ccSxrl">ALl Comics {{getTotal()}} </h2>
+    </div>
     <div>
         <div fxFlex fxLayout="column" class="row">
             <div fxLayout="row wrap">
-                <div class="ant-row" fxFlex="16" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" *ngFor="let comics of allComics | async"
-                style="padding: 10px;">
-                    <div class="ant-col gutter-row ant-col-xs-12 ant-col-sm-8 ant-col-md-6 ant-col-lg-4">
-                        <div class="sc-kEYyzF idVDCi" style="opacity: 1;" draggable="true">
-                            <div class="img-container">
-                                <img class="card-img" src="{{comics.thumbnail.path}}.{{comics.thumbnail.extension}}">
+                <div class="ant-row" fxFlex="16" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="50" fxLayout="column"
+                    *ngFor="let comics of allComics" style="padding: 10px;">
+                    <div class="">
+                        <a [routerLink]="'/comics/'+comics.title+'/'+comics.id">
+                            <div class="sc-kEYyzF idVDCi" style="opacity: 1;" draggable="true">
+                                <div class="img-container">
+                                    <img class="card-img"
+                                        src="{{comics.thumbnail.path}}.{{comics.thumbnail.extension}}">
+                                </div>
+                                <div class="meta-container">
+                                    <h5 class="card-title">{{comics.name}}</h5>
+                                    <p class="card-title">{{comics.title}}</p>
+                                    <p class="card-description">{{comics.description ? comics.description : 'Card
+                                        description not available for this card..'}}</p>
+                                    <div class="view-card">View Details</div>
+                                </div>
                             </div>
-                            <div class="meta-container">
-                                <h5 class="card-title">{{comics.name}}</h5>
-                                <!-- <p class="card-description">{{character.description}}</p> -->
-                                <p class="card-title">{{comics.title}}</p>
-                                <div class="view-card">View Details</div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
+
+    <div *ngIf="loadingShow">
+        <app-loader></app-loader>
+    </div>
+
+    <div class="row">
+        <mat-spinner style="margin: auto;" *ngIf="showSpinner"></mat-spinner>
+    </div>
+
 </div>
 
-    <div style="text-align: center; padding: 30px;">
-        <button (click)="getComicsAll()" mat-raised-button color="primary">Load more comics</button>
-    </div>
-
-
-
-
+<div style="text-align: center; padding: 30px;">
+    <button (click)="getComicsAll()" mat-raised-button class="mat-bt">Load more comics</button>
+</div>

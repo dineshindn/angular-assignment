@@ -1,0 +1,51 @@
+<mat-expansion-panel expanded>
+    <mat-expansion-panel-header>
+        <div class="gnLxji">
+            <h2 class="ant-collapse-header charcc">CHARACTERS</h2>
+        </div>
+    </mat-expansion-panel-header>
+    <div class="sc-bZQynM ccOtAX">
+        <div class="ant-carousel">
+            <div class="slick-slider slick-initialized" dir="ltr">
+                <div class="slick-list">
+                    <div class="slick-track" style=" opacity: 1;">
+                        <div class="container text-center">
+                            <owl-carousel-o [options]="customOptions">
+
+                                <ng-template carouselSlide *ngFor="let slider of allSlider | async">
+                                    <div class="container">
+                                        <div data-index="1" class="slick-slide slick-active" tabindex="-1"
+                                            aria-hidden="false" style="outline: none; width: 222px;">
+                                            <a [routerLink]="'/characters/'+slider.name+'/'+slider.id">
+                                                <div>
+                                                    <div tabindex="-1" style="width: 100%; display: inline-block;">
+                                                        <div class="sc-kEYyzF idVDCi" draggable="true"
+                                                            style="opacity: 1;">
+                                                            <div class="img-container"><img class="card-img"
+                                                                    src="{{slider.thumbnail.path}}.{{slider.thumbnail.extension}}"
+                                                                    width="100%" style="height: 240px; padding: 10px;">
+                                                            </div>
+                                                            <div class="meta-container">
+                                                                <h5 class="card-title">{{slider.name}}</h5>
+                                                                <p class="card-description">{{slider.description ?
+                                                                    slider.description : 'Card description not available
+                                                                    for this card..'}}</p>
+                                                                <div class="view-card">View Details</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </ng-template>
+
+                            </owl-carousel-o>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-expansion-panel>

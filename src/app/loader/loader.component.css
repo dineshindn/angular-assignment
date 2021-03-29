@@ -1,12 +1,4 @@
 
-
-.ant-col-xs-12 {
-    display: block;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 50%;
-}
-
 .idVDCi {
     width: 190px;
     height: 240px;
@@ -34,7 +26,7 @@
 
 .idVDCi .meta-container {
     position: absolute;
-    width: 100%;
+    width: 90%;
     bottom: 0px;
     transition: opacity 0.25s ease-in 0s, bottom 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93) 0s;
     opacity: 0;
@@ -144,46 +136,14 @@
     -webkit-box-align: center;
     align-items: center;
 }
-.ccSxrl {
-    font-size: 24px;
-    font-weight: bold;
-    word-spacing: 4px;
-    margin-bottom: 0px;
-    color: rgb(13, 37, 63);
-    text-transform: uppercase;
-    position: relative;
-    background-color: rgb(245, 248, 250);
-}
-.ccSxrl::before {
-    content: "";
-    position: absolute;
-    color: rgb(204, 204, 204);
-    font-size: 26px;
-    height: 90px;
-    width: 3px;
-    background-color: rgb(1, 180, 228);
-    transform: rotate(
-45deg
-);
-    top: -30px;
-    left: 25px;
-    z-index: -1;
-}
-.ant-row {
-    position: relative;
-    height: auto;
-    margin-right: 0;
-    margin-left: 0;
-    zoom: 1;
-    display: block;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.ant-row:after, .ant-row:before {
-    display: table;
-    content: "";
-}
 
+.mat-bt{    
+    font-size: 14px;
+    padding: 4px 50px;
+    background: rgb(13, 37, 63);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+}
 
 @media (min-width: 992px)
 {
@@ -204,11 +164,32 @@
 
 @media (max-width:600px)
 {
-    .ant-col-xs-12 {
-        display: block;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        width: 50%;
-        margin:auto;
+    .biZBEW {
+        width: 100%;
+        max-width: 350px !important;
+        margin: auto;
     }
+
+    .idVDCi .meta-container {
+        position: absolute;
+        width: 90%;
+        bottom: 0px;
+        transition: opacity 0.25s ease-in 0s, bottom 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93) 0s;
+        opacity: 0;
+        padding: 0px;
+        background-image: linear-gradient(rgba(12, 26, 40, 0), rgba(12, 26, 40, 0.12) 5px, rgba(12, 26, 40, 0.52) 24px, rgba(12, 26, 40, 0.79) 40px, rgb(12, 26, 40) 56px, rgb(12, 26, 40) 100%);
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+}
+
+.loading-preloader{
+    width: 100px !important;
+    height: 100px !important;
+}
+.loading-top{
+    margin-top: -70px;
+    text-align: center;
 }
