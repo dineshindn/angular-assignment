@@ -1,25 +1,25 @@
-<div class="sc-hSdWYo biZBEW row ">
-    <div class="sc-fjdhpX ZOqUU">
-        <h2 class="sc-jzJRlG ccSxrl">ALl Comics {{getTotal()}} </h2>
+<div [class.biZBEW]='true' >
+    <div [class.ZOqUU]='true'>
+        <h2 [class.ccSxrl]='true'>ALl Comics {{getTotal()}}</h2>
     </div>
     <div>
         <div fxFlex fxLayout="column" class="row">
             <div fxLayout="row wrap">
-                <div class="ant-row" fxFlex="16" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="50" fxLayout="column"
-                    *ngFor="let comics of allComics" style="padding: 10px;">
-                    <div class="">
+                <div [class.ant-row]='true' fxFlex="16" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="50" fxLayout="column"
+                    *ngFor="let comics of allComics" [style.padding]="'10px'">
+                    <div>
                         <a [routerLink]="'/comics/'+comics.title+'/'+comics.id">
-                            <div class="sc-kEYyzF idVDCi" style="opacity: 1;" draggable="true">
-                                <div class="img-container">
-                                    <img class="card-img"
+                            <div class="idVDCi" [style.opacity]="'1'" draggable="true">
+                                <div [class.img-container]='true'>
+                                    <img [class.card-img]='true'
                                         src="{{comics.thumbnail.path}}.{{comics.thumbnail.extension}}">
                                 </div>
-                                <div class="meta-container">
-                                    <h5 class="card-title">{{comics.name}}</h5>
-                                    <p class="card-title">{{comics.title}}</p>
-                                    <p class="card-description">{{comics.description ? comics.description : 'Card
-                                        description not available for this card..'}}</p>
-                                    <div class="view-card">View Details</div>
+                                <div [class.meta-container]='true'>
+                                    <h5 [class.card-title]='true'>{{comics.name}}</h5>
+                                    <p [class.card-description]='true'>{{comics.description ? comics.description :
+                                        'Card description not available for this card..'}}</p>
+                                    <p [class.card-title]='true'>{{comics.title}}</p>
+                                    <div [class.view-card]='true'>View Details</div>
                                 </div>
                             </div>
                         </a>
@@ -28,17 +28,14 @@
             </div>
         </div>
     </div>
-
     <div *ngIf="loadingShow">
         <app-loader></app-loader>
     </div>
-
     <div class="row">
-        <mat-spinner style="margin: auto;" *ngIf="showSpinner"></mat-spinner>
+        <mat-spinner [style.margin]="'auto'" *ngIf="showSpinner"></mat-spinner>
     </div>
-
 </div>
 
-<div style="text-align: center; padding: 30px;">
-    <button (click)="getComicsAll()" mat-raised-button class="mat-bt">Load more comics</button>
+<div [style.text-align]="'center'" [style.padding]="'30px'">
+    <button (click)="getComicsAll()" mat-raised-button [class.mat-bt]='true'>Load more comics</button>
 </div>

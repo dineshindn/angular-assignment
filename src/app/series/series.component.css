@@ -1,12 +1,4 @@
 
-
-.ant-col-xs-12 {
-    display: block;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 50%;
-}
-
 .idVDCi {
     width: 190px;
     height: 240px;
@@ -60,7 +52,7 @@
     align-items: center;
 }
 
-.svJME .meta-container {
+.meta-container {
     position: absolute;
     width: 100%;
     bottom: 0px;
@@ -169,20 +161,6 @@
     left: 25px;
     z-index: -1;
 }
-.ant-row {
-    position: relative;
-    height: auto;
-    margin-right: 0;
-    margin-left: 0;
-    zoom: 1;
-    display: block;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.ant-row:after, .ant-row:before {
-    display: table;
-    content: "";
-}
 
 @media (min-width: 992px)
 {
@@ -198,7 +176,7 @@
 {
     .idVDCi {
         width: 98%;
-    }   
+    }
 }
 
 @media (max-width:600px)
@@ -230,5 +208,3 @@
         align-items: center;
     }
 }
-
-

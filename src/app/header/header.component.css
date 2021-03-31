@@ -24,24 +24,11 @@ span{
     justify-content: space-between;
     margin: 0px;
 }
-ol, ul {
-    list-style: none;
-}
-.jzbtTO {
-    font-size: 16px;
-    text-transform: uppercase;
-    padding: 5px 20px;
-    border-bottom: 4px solid rgb(1, 180, 228);
-    border-radius: 2px;
-}
-.jzbtTO:hover {
-    cursor: pointer;
-    color: rgb(1, 180, 228);
-}
 .mat-tab-label, .mat-tab-link {
     color: rgb(255 255 255);
 }
 .mat-tab-link{opacity: 1;}
+
 .mat-tab-link:hover{
     cursor: pointer;
     color: rgb(1, 180, 228);
@@ -58,11 +45,3 @@ ol, ul {
 {
     border-bottom: 4px solid rgb(1, 180, 228) !important;
 }
-@media (max-width: 600px)
-{
-    .jzbtTO {
-        font-size: 14px;
-        padding: 5px 10px;
-    }
-}
-

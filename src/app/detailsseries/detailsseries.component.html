@@ -1,53 +1,42 @@
-<div class="sc-bZQynM ccOtAX">
-    <div class="ant-carousel">
-        <div class="slick-slider slick-initialized" dir="ltr">
-            <div class="slick-list">
-                <div class="slick-track" style=" opacity: 1;">
-                    <div class="container text-center">
-                        <div class="row banner-img" *ngFor="let views of seriesDetails | async">
-                            <img class="card-img" src="{{views.thumbnail.path}}.{{views.thumbnail.extension}}">
-                        </div>
-                        <!-- <div style="text-align: center; opacity: .6;" *ngIf='loading'>
-                    <img class="card-img" src='../../assets/landscape_incredible.jpg'>
-                </div> -->
-                    </div>
-                </div>
-            </div>
+<div [class.ccOtAX]='true'>
+    <div [class.ant-carousel]='true'>
+      <div class="container text-center">
+        <div class="row banner-img" *ngFor="let views of seriesDetails | async">
+          <img [class.card-img]='true' src="{{views.thumbnail.path}}.{{views.thumbnail.extension}}">
         </div>
+      </div>
     </div>
-</div>
-
-<div class="card-back">
-    <div class="over-all">
-        <mat-card *ngFor="let views of seriesDetails | async">
+  </div>
+  
+  <div [class.card-back]='true'>
+    <div [class.over-all]='true'>
+      <mat-card *ngFor="let views of seriesDetails | async">
+        <mat-card-header>
+          <mat-card-title [class.card-titles]='true'>{{views.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content [class.card-descriptions]='true'>
+          <p>
+            {{views.description}}
+          </p>
+        </mat-card-content>
+        <div id="card-childs">
+          <mat-card>
             <mat-card-header>
-                <mat-card-title class="card-titles">{{views.title}}</mat-card-title>
+              <mat-card-title>{{views.comics.available}}</mat-card-title>
             </mat-card-header>
-
-            <mat-card-content class="card-descriptions">
-                <p>
-                    {{views.description}}
-                </p>
+            <mat-card-content>
+              Comics Available
             </mat-card-content>
-            <div id="card-childs">
-                <mat-card>
-                    <mat-card-header>
-                        <mat-card-title>{{views.comics.available}}</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        Comics Available
-                    </mat-card-content>
-                </mat-card>
-
-                <mat-card>
-                    <mat-card-header>
-                        <mat-card-title>{{views.stories.available}}</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        Stories Available
-                    </mat-card-content>
-                </mat-card>
-            </div>
-        </mat-card>
+          </mat-card>
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>{{views.stories.available}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              Stories Available
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </mat-card>
     </div>
-</div>
+  </div>

@@ -1,51 +1,34 @@
 <mat-expansion-panel expanded>
     <mat-expansion-panel-header>
-        <div class="gnLxji">
-            <h2 class="ant-collapse-header charcc">COMICS</h2>
-        </div>
+        <h2 [class.ant-collapse-header]='true'>COMICS </h2>
     </mat-expansion-panel-header>
-    <div class="sc-bZQynM ccOtAX">
-        <div class="ant-carousel">
-            <div class="slick-slider slick-initialized" dir="ltr">
-                <div class="slick-list">
-                    <div class="slick-track" style=" opacity: 1;">
-                        <div class="container text-center">
-                            <owl-carousel-o [options]="customOptions">
-
-                                <ng-template carouselSlide *ngFor="let comicsslider of allComicsSlider | async">
-                                    <div class="container">
-                                        <div data-index="1" class="slick-slide slick-active" tabindex="-1"
-                                            aria-hidden="false" style="outline: none; width: 222px;">
-                                            <div>
-                                                <a [routerLink]="'/comics/'+comicsslider.title+'/'+comicsslider.id">
-                                                    <div tabindex="-1" style="width: 100%; display: inline-block;">
-                                                        <div class="sc-kEYyzF idVDCi" draggable="true"
-                                                            style="opacity: 1;">
-                                                            <div class="img-container"><img class="card-img"
-                                                                    src="{{comicsslider.thumbnail.path}}.{{comicsslider.thumbnail.extension}}"
-                                                                    width="50%" style="height: 240px; padding: 10px;">
-                                                            </div>
-                                                            <div class="meta-container">
-                                                                <h5 class="card-title">{{comicsslider.name}}</h5>
-                                                                <p class="card-description">{{comicsslider.description ?
-                                                                    comicsslider.description : 'Card description not
-                                                                    available for this card..'}}</p>
-                                                                <div class="view-card">View Details</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
+    <div class="container text-center">
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide *ngFor="let comicsslider of allComicsSlider | async">
+                <div class="container">
+                    <div data-index="1" tabindex="-1" aria-hidden="false" [class.card-w]='true'>
+                        <a [routerLink]="'/comics/'+comicsslider.title+'/'+comicsslider.id">
+                            <div>
+                                <div tabindex="-1" [style.width]="'100%'" [style.display]="'inline-block'">
+                                    <div class="idVDCi" draggable="true" [style.opacity]="'1'">
+                                        <div [class.img-container]='true'>
+                                            <img [class.card-img]='true' src="{{comicsslider.thumbnail.path}}.{{comicsslider.thumbnail.extension}}"
+                                                width="50%" [style.height]="'240px'" [style.padding]="'10px'">
                                         </div>
-
+                                        <div [class.meta-container]='true'>
+                                            <h5 [class.card-title]='true'>{{comicsslider.title}}</h5>
+                                            <p [class.card-description]='true'>{{comicsslider.description ?
+                                                comicsslider.description : 'Card description not
+                                                available for this card..'}}</p>
+                                            <div [class.view-card]='true'>View Details</div>
+                                        </div>
                                     </div>
-                                </ng-template>
-
-                            </owl-carousel-o>
-                        </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
+            </ng-template>
+        </owl-carousel-o>
     </div>
 </mat-expansion-panel>
